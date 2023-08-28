@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import Expenses from './Expenses';
 function App() {
+  const datos = [
+    {
+      id:"e1",
+      nombre:"T-Shirt",
+      descripcion:"A white t-shirt",
+      precio:"$35",
+    },
+    {
+      id:"e2",
+      nombre:"Wallet",
+      descripcion:"A fancy wallet",
+      precio:"$20",
+    },
+    {
+      id:"e3",
+      nombre:"Cup",
+      descripcion:"A tea cup",
+      precio:"$5",
+    }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Expenses></Expenses> 
     </div>
   );
 }
